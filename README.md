@@ -1,34 +1,14 @@
-# fgm-skill
+# Figma Best Practices
 
-Личный универсальный скилл Владислава для Figma: понятные имена слоёв, компоненты и токены, адаптивная вёрстка, согласованный контент и проверка макетов.
+A short design guide for Codex when working in Figma. It covers the decisions that make a file easier for the next designer to use.
 
-Не привязан к одному проекту или файлу Figma. Работает вместе с доступными техническими Figma-скиллами и коннектором.
+- Name layers by what they do, and give equivalent component properties the same names.
+- Expose the options designers need and keep instances connected to their components.
+- Build layouts that respond to width, longer text, and optional content.
+- Keep shared data consistent and check the result on real screens.
 
-## Подключение
+The rules are in [SKILL.md](SKILL.md). [Content consistency](references/content.md) covers repeated content and demo data.
 
-Установить этот репозиторий как папку `fgm-skill` в каталоге пользовательских скиллов. Например, для стандартного расположения Codex:
+## Use it
 
-```sh
-git clone https://github.com/vmikh/fgm-skill.git ~/.agents/skills/fgm-skill
-```
-
-Автоматический выбор включён через `allow_implicit_invocation: true`. Явный вызов `$fgm-skill` также доступен. Для обязательного применения вместе с `figma-use` добавь в глобальный `~/.codex/AGENTS.md` (или AGENTS.md своего CODEX_HOME), сохранив остальные инструкции:
-
-```md
-## Figma
-При каждой работе через figma-use/use_figma обязательно прочитай
-~/.agents/skills/fgm-skill/SKILL.md, если актуальная версия ещё не прочитана
-в текущем контексте, и следуй ей вместе с техническим figma-use.
-Пользователю не нужно отдельно вызывать fgm-skill. Если файл недоступен,
-сообщи об этом; не утверждай, что применил его. Изменения скилла перечитывай.
-```
-
-Начни новый сеанс, чтобы глобальная инструкция загрузилась. Автоподбор сам по себе является выбором агента; глобальная инструкция делает совместное применение явным правилом. На другом устройстве установку и глобальное правило нужно повторить.
-
-Документация OpenAI: [области действия скиллов](https://learn.chatgpt.com/docs/customization/overview#skills), [глобальный AGENTS.md](https://developers.openai.com/codex/guides/agents-md).
-
-## Обновления
-
-Редактировать эту же копию, проверить изменения, закоммитить и пушить по поручению. На другом устройстве перед обновлением проверить локальные изменения и выполнить `git pull --ff-only` в папке скилла. Не перезаписывать незакоммиченные правки.
-
-Основные правила — [SKILL.md](SKILL.md); работа с каноническими данными — [references/content.md](references/content.md). В репозиторий попадают универсальные инструкции, а контент конкретных проектов остаётся в проектах.
+Place the repository in your user skills directory as `fgm-skill`. Invoke it with `$fgm-skill` or let Codex select it automatically. For a team-wide default, add an instruction to your project guidance to apply `fgm-skill` alongside `figma-use`. The technical Figma skill covers how to use the tools.

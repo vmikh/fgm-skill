@@ -1,6 +1,6 @@
 interface:
-  display_name: "Figma — порядок и данные"
-  short_description: "Макеты, компоненты, слои и согласованный контент"
-  default_prompt: "Используй $fgm-skill для работы с этими макетами Figma."
+  display_name: "Figma Best Practices"
+  short_description: "Clear components, layouts, and content in Figma"
+  default_prompt: "Use $fgm-skill to build or review these Figma designs."
 policy:
   allow_implicit_invocation: true
